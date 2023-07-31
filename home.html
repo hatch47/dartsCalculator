@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+<link rel="icon" href="Logo.png" type="image/png">
+<title>Darts Calculator</title>
+</head>
+<body>
+
+<div class="formContainer">
+   
+    <label for="firstTextbox">Dart 1:</label>
+    <input type="number" id="firstTextbox" placeholder="0" style="width: 50px; text-align: center;" readonly>
+    <label for="secondTextbox">Dart 2:</label>
+    <input type="number" id="secondTextbox" style="width: 50px; text-align: center;" placeholder="0" readonly>
+    <label for="thirdTextbox">Dart 3:</label>
+    <input type="number" id="thirdTextbox" style="width: 50px; text-align: center;" placeholder="0" readonly>
+    <label for="combinedTextbox">Total:</label>
+    <input type="number" id="combinedTextbox" style="width: 50px; text-align: center;" placeholder="0"readonly><br>
+    <input type="submit" value="Enter Score"onclick="updateScore()">
+
+</div>
+<div class="score">
+<h1><b>Score: <span id="score" style="color: red;">501</span></b></h1>
+</div>
+
+
+<div class="dartboard">
+    
+    <img src="Logo.png" alt="dartboard image" usemap="#workmap">
+
+    <map name="workmap">
+        <area target="" alt="20" title="20" onclick="fillTextbox('20')" href="javascript:void(0)" coords="305,75,389,75,376,161,320,160" shape="poly">
+        <area target="" alt="40" title="40" onclick="fillTextbox('40')" href="javascript:void(0)" coords="304,58,390,56,388,71,306,73" shape="poly">
+        <area target="" alt="60" title="60" onclick="fillTextbox('60')" href="javascript:void(0)" coords="320,163,374,164,373,178,322,177" shape="poly">
+        <area target="" alt="20" title="20" onclick="fillTextbox('20')" href="javascript:void(0)" coords="324,180,372,181,351,314,344,314" shape="poly">
+        <area target="" alt="1" title="1" onclick="fillTextbox('1')" href="javascript:void(0)" coords="393,77,469,101,428,179,379,163" shape="poly">
+        <area target="" alt="2" title="2" onclick="fillTextbox('2')" href="javascript:void(0)" coords="395,59,392,70,470,97,477,86" shape="poly">
+        <area target="" alt="3" title="3" onclick="fillTextbox('13')" href="javascript:void(0)" coords="377,166,376,176,423,193,428,182" shape="poly">
+        <area target="" alt="1" title="1" onclick="fillTextbox('1')" href="javascript:void(0)" coords="375,183,353,314,359,317,421,198" shape="poly">
+        <area target="" alt="18" title="18" onclick="fillTextbox('18')" href="javascript:void(0)" coords="475,104,540,150,476,210,434,179" shape="poly">
+        <area target="" alt="18" title="18" onclick="fillTextbox('18')" href="javascript:void(0)" coords="425,200,362,317,368,321,464,226" shape="poly">
+        <area target="" alt="36" title="36" onclick="fillTextbox('36')" href="javascript:void(0)" coords="475,98,480,87,552,137,541,147" shape="poly">
+        <area target="" alt="54" title="54" onclick="fillTextbox('54')" href="javascript:void(0)" coords="432,184,425,195,464,224,476,214" shape="poly">
+        <area target="" alt="4" title="4" onclick="fillTextbox('4')" href="javascript:void(0)" coords="482,215,544,153,592,216,512,258" shape="poly">
+        <area target="" alt="4" title="4" onclick="fillTextbox('4')" href="javascript:void(0)" coords="467,230,368,322,373,328,494,267" shape="poly">
+        <area target="" alt="12" title="12" onclick="fillTextbox('12')" href="javascript:void(0)" coords="467,227,476,220,508,260,498,264" shape="poly">
+        <area target="" alt="8" title="8" onclick="fillTextbox('8')" href="javascript:void(0)" coords="547,150,555,143,609,210,598,216" shape="poly">
+        <area target="" alt="13" title="13" onclick="fillTextbox('13')" href="javascript:void(0)" coords="514,262,594,223,618,300,531,312" shape="poly">
+        <area target="" alt="13" title="13" onclick="fillTextbox('13')" href="javascript:void(0)" coords="374,330,496,270,511,314,376,338" shape="poly">
+        <area target="" alt="26" title="26" onclick="fillTextbox('26')" href="javascript:void(0)" coords="597,220,608,215,636,294,623,298" shape="poly">
+        <area target="" alt="39" title="39" onclick="fillTextbox('39')" href="javascript:void(0)" coords="498,270,510,263,527,310,516,315" shape="poly">
+        <area target="" alt="6" title="6" onclick="fillTextbox('6')" href="javascript:void(0)" coords="532,317,620,304,618,382,532,367" shape="poly">
+        <area target="" alt="6" title="6" onclick="fillTextbox('6')" href="javascript:void(0)" coords="376,347,376,340,512,319,512,367" shape="poly">
+        <area target="" alt="12" title="12" onclick="fillTextbox('12')" href="javascript:void(0)" coords="626,301,624,383,637,385,639,300" shape="poly">
+        <area target="" alt="18" title="18" onclick="fillTextbox('18')" href="javascript:void(0)" coords="515,318,528,318,526,369,513,367" shape="poly">
+        <area target="" alt="50" title="50" onclick="fillTextbox('50')" href="javascript:void(0)" coords="336,338,348,332,358,341,352,354,337,351" shape="poly">
+        <area target="" alt="25" title="25" onclick="fillTextbox('25')" href="javascript:void(0)" coords="346,313,365,319,374,334,375,350,362,365,348,368,331,366,320,351,320,332,328,322" shape="poly">
+        <area target="" alt="10" title="10" onclick="fillTextbox('10')" href="javascript:void(0)" coords="532,373,618,387,592,464,516,423" shape="poly">
+        <area target="" alt="10" title="10" onclick="fillTextbox('10')" href="javascript:void(0)" coords="511,370,381,349,378,354,497,416" shape="poly">
+        <area target="" alt="20" title="20" onclick="fillTextbox('20')" href="javascript:void(0)" coords="620,386,636,390,610,472,595,466" shape="poly">
+        <area target="" alt="30" title="30" onclick="fillTextbox('30')" href="javascript:void(0)" coords="514,370,527,374,513,423,500,415" shape="poly">
+        <area target="" alt="15" title="15" onclick="fillTextbox('15')" href="javascript:void(0)" coords="481,472,512,430,592,468,544,535" shape="poly">
+        <area target="" alt="15" title="15" onclick="fillTextbox('15')" href="javascript:void(0)" coords="372,365,378,361,494,420,466,457" shape="poly">
+        <area target="" alt="30" title="30" onclick="fillTextbox('30')" href="javascript:void(0)" coords="550,538,557,547,608,478,597,471" shape="poly">
+        <area target="" alt="45" title="45" onclick="fillTextbox('45')" href="javascript:void(0)" coords="468,459,496,422,508,427,477,467" shape="poly">
+        <area target="" alt="2" title="2" onclick="fillTextbox('2')" href="javascript:void(0)" coords="434,505,476,477,540,534,475,581" shape="poly">
+        <area target="" alt="2" title="2" onclick="fillTextbox('2')" href="javascript:void(0)" coords="367,372,371,370,464,462,425,487,367,372" shape="poly">
+        <area target="" alt="4" title="4" onclick="fillTextbox('4')" href="javascript:void(0)" coords="474,584,482,597,552,550,541,540" shape="poly">
+        <area target="" alt="6" title="6" onclick="fillTextbox('6')" href="javascript:void(0)" coords="428,491,465,461,475,474,434,503" shape="poly">
+        <area target="" alt="17" title="17" onclick="fillTextbox('17')" href="javascript:void(0)" coords="379,526,431,511,469,585,392,611" shape="poly">
+        <area target="" alt="17" title="17" onclick="fillTextbox('17')" href="javascript:void(0)" coords="355,377,361,377,421,491,377,502,355,378" shape="poly">
+        <area target="" alt="34" title="34" onclick="fillTextbox('34')" href="javascript:void(0)" coords="393,614,396,624,476,602,472,591" shape="poly">
+        <area target="" alt="51" title="51" onclick="fillTextbox('51')" href="javascript:void(0)" coords="374,507,422,494,430,506,380,519" shape="poly">
+        <area target="" alt="3" title="3" onclick="fillTextbox('3')" href="javascript:void(0)" coords="322,526,375,527,388,610,306,610" shape="poly">
+        <area target="" alt="3" title="3" onclick="fillTextbox('3')" href="javascript:void(0)" coords="343,375,349,375,371,507,324,506,343,376" shape="poly">
+        <area target="" alt="6" title="6" onclick="fillTextbox('6')" href="javascript:void(0)" coords="305,614,303,630,389,630,388,614" shape="poly">
+        <area target="" alt="9" title="9" onclick="fillTextbox('9')" href="javascript:void(0)" coords="324,510,371,510,372,522,323,520" shape="poly">
+        <area target="" alt="19" title="19" onclick="fillTextbox('19')" href="javascript:void(0)" coords="265,509,317,525,301,611,224,589" shape="poly">
+        <area target="" alt="19" title="19" onclick="fillTextbox('19')" href="javascript:void(0)" coords="334,371,341,373,320,505,274,492" shape="poly">
+        <area target="" alt="38" title="38" onclick="fillTextbox('38')" href="javascript:void(0)" coords="222,590,215,602,302,627,302,616" shape="poly">
+        <area target="" alt="57" title="57" onclick="fillTextbox('57')" href="javascript:void(0)" coords="272,493,320,509,316,522,265,505" shape="poly">
+        <area target="" alt="7" title="7" onclick="fillTextbox('7')" href="javascript:void(0)" coords="218,476,261,506,220,582,156,538" shape="poly">
+        <area target="" alt="7" title="7" onclick="fillTextbox('7')" href="javascript:void(0)" coords="327,368,330,370,271,486,233,460,327,368" shape="poly">
+        <area target="" alt="14" title="14" onclick="fillTextbox('14')" href="javascript:void(0)" coords="152,537,142,550,212,600,219,586" shape="poly">
+        <area target="" alt="21" title="21" onclick="fillTextbox('21')" href="javascript:void(0)" coords="227,464,271,489,264,503,219,472" shape="poly">
+        <area target="" alt="16" title="16" onclick="fillTextbox('16')" href="javascript:void(0)" coords="181,428,212,471,150,532,102,470" shape="poly">
+        <area target="" alt="16" title="16" onclick="fillTextbox('16')" href="javascript:void(0)" coords="325,364,227,455,201,422,319,358" shape="poly">
+        <area target="" alt="32" title="32" onclick="fillTextbox('32')" href="javascript:void(0)" coords="99,470,86,478,139,548,150,539" shape="poly">
+        <area target="" alt="48" title="48" onclick="fillTextbox('48')" href="javascript:void(0)" coords="195,423,226,460,216,470,186,427" shape="poly">
+        <area target="" alt="8" title="8" onclick="fillTextbox('8')" href="javascript:void(0)" coords="163,378,180,424,99,463,76,390" shape="poly">
+        <area target="" alt="8" title="8" onclick="fillTextbox('8')" href="javascript:void(0)" coords="319,356,198,414,184,370,316,350" shape="poly">
+        <area target="" alt="16" title="16" onclick="fillTextbox('16')" href="javascript:void(0)" coords="72,389,58,390,83,473,98,464" shape="poly">
+        <area target="" alt="24" title="24" onclick="fillTextbox('24')" href="javascript:void(0)" coords="179,372,194,414,183,421,168,375" shape="poly">
+        <area target="" alt="11" title="11" onclick="fillTextbox('11')" href="javascript:void(0)" coords="162,317,163,367,77,383,72,303" shape="poly">
+        <area target="" alt="11" title="11" onclick="fillTextbox('11')" href="javascript:void(0)" coords="315,347,184,367,180,319,314,339" shape="poly">
+        <area target="" alt="22" title="22" onclick="fillTextbox('22')" href="javascript:void(0)" coords="71,300,57,301,56,387,72,385" shape="poly">
+        <area target="" alt="33" title="33" onclick="fillTextbox('33')" href="javascript:void(0)" coords="178,320,179,367,166,368,164,317" shape="poly">
+        <area target="" alt="14" title="14" onclick="fillTextbox('14')" href="javascript:void(0)" coords="181,264,163,311,75,295,102,224" shape="poly">
+        <area target="" alt="14" title="14" onclick="fillTextbox('14')" href="javascript:void(0)" coords="314,335,184,314,196,272,316,329" shape="poly">
+        <area target="" alt="28" title="28" onclick="fillTextbox('28')" href="javascript:void(0)" coords="100,219,84,212,60,295,74,299" shape="poly">
+        <area target="" alt="42" title="42" onclick="fillTextbox('42')" href="javascript:void(0)" coords="194,271,180,317,166,313,182,262" shape="poly">
+        <area target="" alt="9" title="9" onclick="fillTextbox('9')" href="javascript:void(0)" coords="213,215,183,257,101,218,148,151" shape="poly">
+        <area target="" alt="9" title="9" onclick="fillTextbox('9')" href="javascript:void(0)" coords="320,328,199,267,230,229,324,323" shape="poly">
+        <area target="" alt="18" title="18" onclick="fillTextbox('18')" href="javascript:void(0)" coords="147,149,136,140,84,212,96,218" shape="poly">
+        <area target="" alt="27" title="27" onclick="fillTextbox('27')" href="javascript:void(0)" coords="228,226,196,265,184,262,218,218" shape="poly">
+        <area target="" alt="12" title="12" onclick="fillTextbox('12')" href="javascript:void(0)" coords="264,181,218,211,154,153,221,104" shape="poly">
+        <area target="" alt="12" title="12" onclick="fillTextbox('12')" href="javascript:void(0)" coords="329,322,232,226,268,198,333,317" shape="poly">
+        <area target="" alt="24" title="24" onclick="fillTextbox('24')" href="javascript:void(0)" coords="220,99,212,87,140,139,153,149" shape="poly">
+        <area target="" alt="36" title="36" onclick="fillTextbox('36')" href="javascript:void(0)" coords="269,195,228,224,220,213,263,184" shape="poly">
+        <area target="" alt="5" title="5" onclick="fillTextbox('5')" href="javascript:void(0)" coords="316,160,265,178,225,99,301,76" shape="poly">
+        <area target="" alt="5" title="5" onclick="fillTextbox('5')" href="javascript:void(0)" coords="333,311,272,195,320,179,341,310" shape="poly">
+        <area target="" alt="10" title="10" onclick="fillTextbox('10')" href="javascript:void(0)" coords="304,71,300,57,215,84,220,97" shape="poly">
+        <area target="" alt="15" title="15" onclick="fillTextbox('15')" href="javascript:void(0)" coords="319,177,274,193,266,182,315,167" shape="poly">
+        <area target="" alt="Miss" title="Miss" onclick="fillTextbox('0')" href="javascript:void(0)" coords="554,14,654,66" shape="rect">
+    </map>
+
+
+</div>
+</body>
+</html>

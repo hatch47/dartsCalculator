@@ -1,0 +1,10 @@
+things to add:
+
+- players
+- start score option -- currently only 501
+- edit or undo button for both incorrect scores and submitted scores
+
+
+
+optional:
+postgame stats and averages
