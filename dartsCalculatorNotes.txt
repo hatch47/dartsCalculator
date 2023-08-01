@@ -7,4 +7,4 @@ things to add:
 
 optional:
 postgame stats and averages
-where the user clicks on the dartbaord, add dart images
+where the user clicks on the dartbaord, add dart images. when the user right-clicks the image, it'll remove it.
