@@ -64,3 +64,70 @@ function updateCombinedTextbox() {
     } 
   }
 
+  function startGame() {
+    setScore();
+  
+    const playersSelect = document.getElementById("players");
+    const numPlayers = parseInt(playersSelect.value);
+  
+    for (let i = 1; i <= 4; i++) {
+      const teamTextarea = document.getElementById(`name-textbox${i}`);
+      if (i <= numPlayers) {
+        teamTextarea.style.display = "block";
+      } else {
+        teamTextarea.style.display = "none";
+      }
+    }
+  }
+  
+
+  function setScore() {
+    const selectedGameType = document.getElementById("gameType").value;
+    let score = ""; // Default score
+
+    // Set the score based on the selected game type
+    switch (selectedGameType) {
+        case "301":
+            score = 301;
+            break;
+        case "101":
+            score = 101;
+            break;
+        case "201":
+            score = 201;
+            break;
+        case "301":
+            score = 301;
+            break;
+        case "401":
+            score = 401;
+            break;
+        case "501":
+            score = 501;
+            break;
+        case "601":
+            score = 601;
+            break;
+        case "701":
+            score = 701;
+            break;
+        case "801":
+            score = 801;
+            break;
+        case "901":
+            score = 901;
+            break;
+        case "1001":
+            score = 1001;
+            break;
+        default:
+            score = 301;
+            break;
+    }
+
+    document.getElementById("score").innerText = score;
+}
+
+
+
+

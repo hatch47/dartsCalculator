@@ -8,21 +8,59 @@
 </head>
 <body>
 
+<div class="setupContainer">
+    <label for="gameType">Game Type:</label>&nbsp;
+        <select name="gameType" id="gameType">
+            <option value="301">301</option>
+            <option value="101">101</option>
+            <option value="201">201</option>
+            <option value="401">401</option>
+            <option value="501">501</option>
+            <option value="601">601</option>
+            <option value="701">701</option>
+            <option value="801">801</option>
+            <option value="901">901</option>
+            <option value="1001">1001</option>
+        </select>&nbsp;&nbsp;
+    <label for="players">Players</label>&nbsp;
+        <select name="players" id="players" onchange="handlePlayerSelection()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+      &nbsp;&nbsp;
+      <input type="submit" value="Start Game" onclick="startGame()">
+
+</div>
 <div class="formContainer">
    
     <label for="firstTextbox">Dart 1:</label>
-    <input type="number" id="firstTextbox" placeholder="0" style="width: 50px; text-align: center;" readonly>
+    <input type="number" id="firstTextbox" placeholder="0" style="width: 50px; text-align: center; outline: none; border: none;" readonly>
     <label for="secondTextbox">Dart 2:</label>
-    <input type="number" id="secondTextbox" style="width: 50px; text-align: center;" placeholder="0" readonly>
+    <input type="number" id="secondTextbox" style="width: 50px; text-align: center; outline: none; border: none;" placeholder="0" readonly>
     <label for="thirdTextbox">Dart 3:</label>
-    <input type="number" id="thirdTextbox" style="width: 50px; text-align: center;" placeholder="0" readonly>
+    <input type="number" id="thirdTextbox" style="width: 50px; text-align: center; outline: none; border: none;" placeholder="0" readonly>
     <label for="combinedTextbox">Total:</label>
-    <input type="number" id="combinedTextbox" style="width: 50px; text-align: center;" placeholder="0"readonly><br>
+    <input type="number" id="combinedTextbox" style="width: 50px; text-align: center; outline: none; border: none;" placeholder="0"readonly><br>
     <input type="submit" value="Enter Score"onclick="updateScore()">
 
+
 </div>
+
+<div class="transparent-textbox">
+    <textarea id="name-textbox1" style="display: none;" placeholder="Team 1"></textarea>
+    <textarea id="name-textbox2" style="display: none;" placeholder="Team 2"></textarea>
+    <textarea id="name-textbox3" style="display: none;" placeholder="Team 3"></textarea>
+    <textarea id="name-textbox4" style="display: none;" placeholder="Team 4"></textarea>
+</div>
+
 <div class="score">
-<h1><b>Score: <span id="score" style="color: red;">501</span></b></h1>
+    <h1><b><span id="score" style="color: red;"></span></b></h1>
+    <h1><b><span id="score" style="color: red;"></span></b></h1>
+    <h1><b><span id="score" style="color: red;"></span></b></h1>
+    <h1><b><span id="score" style="color: red;"></span></b></h1>
 </div>
 
 

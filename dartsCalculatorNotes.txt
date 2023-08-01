@@ -1,10 +1,9 @@
 things to add:
 
-- players
-- start score option -- currently only 501
+
 - edit or undo button for both incorrect scores and submitted scores
-
-
+- some kind of warning or session so if the page is reset then data doesnt disappear without warning
+- add some sort of highlight on the team whos turn it is
 
 optional:
 postgame stats and averages
