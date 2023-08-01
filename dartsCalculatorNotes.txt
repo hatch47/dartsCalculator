@@ -1,9 +1,10 @@
 things to add:
 
-
+- center dartboard on page, score and other stuff can be moved
 - edit or undo button for both incorrect scores and submitted scores
 - some kind of warning or session so if the page is reset then data doesnt disappear without warning
 - add some sort of highlight on the team whos turn it is
 
 optional:
 postgame stats and averages
+where the user clicks on the dartbaord, add dart images
