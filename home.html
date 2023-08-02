@@ -46,7 +46,7 @@
     <input type="number" id="combinedTextbox" style="width: 90px; font-size: 50px; background-color: green; text-align: center; outline: none; border: none;" placeholder="0"readonly><br>
 </div>
 <div class="enterScore">
-     <input type="submit" style="background-color: green; color: white; width: 250px; height: 120px; font-size: 30px;" value="Enter Score"onclick="updateScore()">
+     <input type="submit" style="background-color: green; color: white; width: 250px; height: 120px; font-size: 30px;" value="Enter Score"onclick="updateScore()" onmouseover="this.style.backgroundColor='darkgreen';" onmouseout="this.style.backgroundColor='green';">
 </div>
 
 <div class="transparent-textbox">
@@ -64,10 +64,10 @@
 </div>
 
 <div class="turn">
-    <h1><b><span id="turn1" style="color: green;"></span></b></h1>
-    <h1><b><span id="turn2" style="color: green;"></span></b></h1>
-    <h1><b><span id="turn3" style="color: green;"></span></b></h1>
-    <h1><b><span id="turn4" style="color: green;"></span></b></h1>
+    <h2><b><span id="turn1" style="color: green;"></span></b></h2>
+    <h2><b><span id="turn2" style="color: green;"></span></b></h2>
+    <h2><b><span id="turn3" style="color: green;"></span></b></h2>
+    <h2><b><span id="turn4" style="color: green;"></span></b></h2>
 </div>
 
 

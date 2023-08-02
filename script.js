@@ -48,7 +48,7 @@ function updateScore() {
       document.getElementById('thirdTextbox').value = '';
       document.getElementById('combinedTextbox').value = '';
     } else if (newScore < 0) {
-      alert("You busted, mark all 3 darts as 'Miss' for busts");
+      alert("You Busted!");
       document.getElementById('firstTextbox').value = '';
       document.getElementById('secondTextbox').value = '';
       document.getElementById('thirdTextbox').value = '';
@@ -169,16 +169,16 @@ function switchTurn() {
   // Set the "^" symbol on the current player's turn
   switch (currentPlayer) {
     case 1:
-      document.getElementById("turn1").innerText = "^";
+      document.getElementById("turn1").innerText = "\u25BC";
       break;
     case 2:
-      document.getElementById("turn2").innerText = "^";
+      document.getElementById("turn2").innerText = "\u25BC";
       break;
     case 3:
-      document.getElementById("turn3").innerText = "^";
+      document.getElementById("turn3").innerText = "\u25BC";
       break;
     case 4:
-      document.getElementById("turn4").innerText = "^";
+      document.getElementById("turn4").innerText = "\u25BC";
       break;
     default:
       break;
