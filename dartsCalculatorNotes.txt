@@ -1,4 +1,4 @@
-optional things to add later:
+optional ideas to add later:
 - edit or undo button for both incorrect scores and submitted scores
 - some kind of warning or session so if the page is reset then data doesnt disappear without warning
 - disable start game button after game has started

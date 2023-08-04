@@ -26,20 +26,6 @@ input[type="number"]::-webkit-outer-spin-button {
     right: 15%;
   }
 
-  .score {
-    position: absolute;
-    top: 11%;
-    left: 8%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-  }
-
-  .score h1 {
-    margin-right: 82px;
-  }
-
   .turn {
     position: absolute;
     top: 3%;
@@ -48,11 +34,38 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-direction: row;
     align-items: center;
     text-align: center;
-  }
+    z-index: 1; /* Ensure turn div is above other elements */
+}
 
-  .turn h2 {
+.turn h2 {
     margin-right: 130px;
-  }
+}
+
+.transparent-textbox {
+    position: absolute;
+    top: 8%; 
+    left: 5%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+.score {
+    position: absolute;
+    top: 14%; 
+    left: 5%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.score h1 {
+    margin: 0;
+    width: 130px;
+    font-size: 48px;
+    /* text-align: center; */
+}
 
   .setupContainer {
     display: flex;
@@ -63,58 +76,21 @@ input[type="number"]::-webkit-outer-spin-button {
     left: 7%;
   }
 
-  .transparent-textbox {
-    position: absolute;
-    top: 8%;
-    left: 5%;
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    border: none;
-  }
-  
-  #name-textbox1 {
+  .transparent-textbox textarea {
     background-color: transparent;
     border: none;
     resize: none;
-    width: 125px; 
-    height: 150px; 
-    padding: 3px;
+    width: 125px;
+    padding: 0px; 
     color: #000;
     font-size: 18px;
-    /* font-family: Arial, sans-serif; */
     outline: none;
     text-align: center;
-  }
+}
 
-  #name-textbox2 {
-    background-color: transparent;
-    border: none;
-    resize: none;
-    width: 125px; 
-    height: 150px; 
-    padding: 3px;
-    color: #000;
-    font-size: 18px;
-    /* font-family: Arial, sans-serif; */
-    outline: none;
-    text-align: center;
-  }
-
-  #name-textbox3 {
-    background-color: transparent;
-    border: none;
-    resize: none;
-    width: 125px; 
-    height: 150px; 
-    padding: 3px;
-    color: #000;
-    font-size: 18px;
-    /* font-family: Arial, sans-serif; */
-    outline: none;
-    text-align: center;
-  }
-
+  #name-textbox1,
+  #name-textbox2, 
+  #name-textbox3, 
   #name-textbox4 {
     background-color: transparent;
     border: none;
@@ -130,19 +106,19 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   #firstTextbox::placeholder {
-    color: white; /* Change the color to your desired one */
+    color: white; 
   }
 
   #secondTextbox::placeholder {
-    color: white; /* Change the color to your desired one */
+    color: white; 
   }
 
   #thirdTextbox::placeholder {
-    color: white; /* Change the color to your desired one */
+    color: white; 
   }
 
   #combinedTextbox::placeholder {
-    color: white; /* Change the color to your desired one */
+    color: white; 
   }
   
   .hidden {
