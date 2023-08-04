@@ -41,13 +41,13 @@ function updateScore() {
     counter++;
     switchTurn();
     
-    if (newScore > 0) {
+    if (newScore > 1) {
       scoreElement.textContent = newScore;
       document.getElementById('firstTextbox').value = '';
       document.getElementById('secondTextbox').value = '';
       document.getElementById('thirdTextbox').value = '';
       document.getElementById('combinedTextbox').value = '';
-    } else if (newScore < 0) {
+    } else if (newScore < 0 || newScore === 1) {
       alert("You Busted!");
       document.getElementById('firstTextbox').value = '';
       document.getElementById('secondTextbox').value = '';
