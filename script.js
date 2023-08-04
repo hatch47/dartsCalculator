@@ -185,6 +185,12 @@ function switchTurn() {
   }
 }
 
+function clearFields() {
+  document.getElementById('firstTextbox').value = '';
+  document.getElementById('secondTextbox').value = '';
+  document.getElementById('thirdTextbox').value = '';
+  document.getElementById('combinedTextbox').value = '';
+}
 
 
 
