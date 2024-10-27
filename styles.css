@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .formContainer {
@@ -21,12 +21,166 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .dartboard {
-    position: absolute;
-    top: 0%;
-    right: 15%;
+  flex: 0 0 auto;
+  margin-left: 40%;
+}
+
+  .table-container {
+    display: table;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    overflow-x: auto; 
+}
+.table-row {
+    display: table-row;
+}
+.table-cell {
+    display: table-cell;
+    border: 1px solid black;
+    padding: 5px;
+}
+.turn, .score, .team-name {
+    vertical-align: middle;
+}
+.turn span, .score span {
+    font-size: 48px;
+    font-weight: bold;
+}
+.score h1 {
+    margin: 0;
+    /* font-size: 24px; */
+    color: black;
+}
+textarea {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    color: black;
+    background-color: transparent;
+    outline: none;
+}
+
+  #firstTextbox::placeholder {
+    color: white; 
   }
 
-  .turn {
+  #secondTextbox::placeholder {
+    color: white; 
+  }
+
+  #thirdTextbox::placeholder {
+    color: white; 
+  }
+
+  #combinedTextbox::placeholder {
+    color: white; 
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .enterScore {
+    position: absolute;
+    top: 40%;
+    left: 18%;
+  }
+
+  .setupContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds space between elements */
+    position: absolute;
+    width: 30%;
+    top: 1%;
+    left: 7%;
+    padding: 10px; /* Adds padding around the container */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    padding: 5px;
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+input[type="submit"] {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: blue; /* Blue background color */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+input[type="submit"]:hover {
+    background-color: darkblue; /* Darker blue on hover */
+}
+
+.setupContainer2 {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Adds space between elements */
+  position: absolute;
+  width: 30%;
+  left: 7%;
+  padding: 10px; /* Adds padding around the container */
+  background-color: #f9f9f9; /* Light background color for contrast */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  flex: 1;
+}
+
+.scoreContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Adds space between elements */
+  position: absolute;
+  width: 30%;
+  left: 7%;
+  padding: 10px; /* Adds padding around the container */
+  background-color: #f9f9f9; /* Light background color for contrast */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.dartboardMobile {
+  flex: 0 0 auto;
+  bottom: 0;
+}
+
+
+/* Prior Styles */
+
+
+/* Media query for mobile devices
+@media only screen and (max-width: 900px) {
+  .dartboard {
+    margin-top: 250px;
+  }
+} */
+
+
+    /* .setupContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 1%;
+    left: 7%;
+  } */
+ /* .turn {
     position: absolute;
     top: 3%;
     left: 9%;
@@ -34,7 +188,7 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-direction: row;
     align-items: center;
     text-align: center;
-    z-index: 1; /* Ensure turn div is above other elements */
+    z-index: 1; 
 }
 
 .turn h2 {
@@ -64,17 +218,8 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
     width: 130px;
     font-size: 48px;
-    /* text-align: center; */
+    
 }
-
-  .setupContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: absolute;
-    top: 1%;
-    left: 7%;
-  }
 
   .transparent-textbox textarea {
     background-color: transparent;
@@ -100,33 +245,6 @@ input[type="number"]::-webkit-outer-spin-button {
     padding: 3px;
     color: #000;
     font-size: 18px;
-    /* font-family: Arial, sans-serif; */
     outline: none;
     text-align: center;
-  }
-
-  #firstTextbox::placeholder {
-    color: white; 
-  }
-
-  #secondTextbox::placeholder {
-    color: white; 
-  }
-
-  #thirdTextbox::placeholder {
-    color: white; 
-  }
-
-  #combinedTextbox::placeholder {
-    color: white; 
-  }
-  
-  .hidden {
-    display: none;
-  }
-
-  .enterScore {
-    position: absolute;
-    top: 40%;
-    left: 18%;
-  }
+  } */
